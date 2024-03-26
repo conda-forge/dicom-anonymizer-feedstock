@@ -1,5 +1,5 @@
 {% set name = "dicom-anonymizer" %}
-{% set version = "1.0.11" %}
+{% set version = "1.0.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dicom_anonymizer-{{ version }}.tar.gz
-  sha256: 101ec37e6dc51ba1b2438b14adb569efde23830f6fe5fbae09f225963664b420
+  sha256: 2318a8c06e7f655d6d7920471a60a0369a05f9079dfdff8875274b0cbd3756a5
 
 build:
   entry_points:
