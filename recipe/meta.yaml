@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dicom_anonymizer-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dicom_anonymizer-{{ version }}.tar.gz
   sha256: fc5763235c0115f47475acf1a84902c407ad781f5f9425ed65cd1322fb0d76f4
 
 build:
@@ -14,15 +14,15 @@ build:
     - dicom-anonymizer = dicomanonymizer.anonymizer:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - pydicom
-    - python >=3.6
+    - python >={{ python_min }}
     - tqdm
 
 test:
@@ -33,6 +33,7 @@ test:
     - dicom-anonymizer --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/KitwareMedical/dicom-anonymizer
