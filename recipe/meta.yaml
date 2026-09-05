@@ -1,13 +1,13 @@
 {% set name = "dicom-anonymizer" %}
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dicom_anonymizer-{{ version }}.tar.gz
-  sha256: 2cf2e6bf5c412163a2ab74e77ae917a1c7cffb9ab6dc730690f1862182547216
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/dicom_anonymizer-{{ version }}.tar.gz
+  sha256: ee8ff2013a960d27c41481a8768612ea6bea1802641b0d3baf8a356867213c47
 
 build:
   entry_points:
